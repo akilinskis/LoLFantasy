@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Private:</strong>
+  <%= @league.private %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @league.password %>
+</p>
+
+<p>
+  <strong>Commissioner:</strong>
+  <%= @league.commissioner_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @league.type %>
+</p>
+
+<p>
+  <strong>Killpoints:</strong>
+  <%= @league.killPoints %>
+</p>
+
+<p>
+  <strong>Deathpoints:</strong>
+  <%= @league.deathPoints %>
+</p>
+
+<p>
+  <strong>Assistpoints:</strong>
+  <%= @league.assistPoints %>
+</p>
+
+<p>
+  <strong>Minionkills:</strong>
+  <%= @league.minionKills %>
+</p>
+
+<p>
+  <strong>Gamelength:</strong>
+  <%= @league.gameLength %>
+</p>
+
+<p>
+  <strong>Maxteams:</strong>
+  <%= @league.maxTeams %>
+</p>
+
+<%= link_to 'Edit', edit_league_path(@league) %> |
+<%= link_to 'Back', leagues_path %>

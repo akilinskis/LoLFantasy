@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  private: false
+  password: MyString
+  commissioner_id: 1
+  type: 
+  killPoints: 1
+  deathPoints: 1
+  assistPoints: 1
+  minionKills: 1
+  gameLength: 1
+  maxTeams: 1
+
+two:
+  private: false
+  password: MyString
+  commissioner_id: 1
+  type: 
+  killPoints: 1
+  deathPoints: 1
+  assistPoints: 1
+  minionKills: 1
+  gameLength: 1
+  maxTeams: 1

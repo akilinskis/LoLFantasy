@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  handle: MyString
+  user_id: 1
+  startingTop: 1
+  startingJungle: 1
+  startingMid: 1
+  startingADCarry: 1
+  startingSupport: 1
+  league_id: 1
+  locked: false
+
+two:
+  name: MyString
+  handle: MyString
+  user_id: 1
+  startingTop: 1
+  startingJungle: 1
+  startingMid: 1
+  startingADCarry: 1
+  startingSupport: 1
+  league_id: 1
+  locked: false

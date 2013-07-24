@@ -1,0 +1,39 @@
+<h1>Listing team_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pro team</th>
+      <th>Game</th>
+      <th>Top</th>
+      <th>Jungle</th>
+      <th>Mid</th>
+      <th>AD Carry</th>
+      <th>Support</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @team_scores.each do |team_score| %>
+      <tr>
+        <td><%= link_to team_score.pro_team.name, team_score.pro_team %></td>
+        <td><%= team_score.game_id %></td>
+        <td><%= link_to team_score.player_score_top.player.name, team_score.player_score_top %></td>
+        <td><%= link_to team_score.player_score_jungle.player.name, team_score.player_score_jungle %></td>
+        <td><%= link_to team_score.player_score_mid.player.name, team_score.player_score_mid %></td>
+        <td><%= link_to team_score.player_score_ad_carry.player.name, team_score.player_score_ad_carry %></td>
+        <td><%= link_to team_score.player_score_support.player.name, team_score.player_score_support %></td>
+        <td><%= link_to 'Show', team_score %></td>
+        <td><%= link_to 'Edit', edit_team_score_path(team_score) %></td>
+        <td><%= link_to 'Destroy', team_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Team score', new_team_score_path %>

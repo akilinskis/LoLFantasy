@@ -1,0 +1,31 @@
+<h1>Listing waiver_claims</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Player</th>
+      <th>Dropping Player</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @waiver_claims.each do |waiver_claim| %>
+      <tr>
+        <td><%= link_to "#{waiver_claim.team.league.name}: #{waiver_claim.team.name}", waiver_claim.team %></td>
+        <td><%= link_to "#{waiver_claim.player.pro_team.handle} #{waiver_claim.player.name}", waiver_claim.player %></td>
+        <td><%= link_to "#{waiver_claim.dropping_player.pro_team.handle} #{waiver_claim.dropping_player.name}", waiver_claim.dropping_player %></td>
+        <td><%= link_to 'Show', waiver_claim %></td>
+        <td><%= link_to 'Edit', edit_waiver_claim_path(waiver_claim) %></td>
+        <td><%= link_to 'Destroy', waiver_claim, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Waiver claim', new_waiver_claim_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Currentseason:</strong>
+  <%= @global.current_season %>
+</p>
+
+<p>
+  <strong>Currentsplit:</strong>
+  <%= @global.current_split %>
+</p>
+
+<%= link_to 'Edit', edit_global_path(@global) %> |
+<%= link_to 'Back', globals_path %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @team.name %>
+</p>
+
+<p>
+  <strong>Handle:</strong>
+  <%= @team.handle %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @team.owner_id %>
+</p>
+
+<p>
+  <strong>Startingtop:</strong>
+  <%= @team.starting_top %>
+</p>
+
+<p>
+  <strong>Startingjungle:</strong>
+  <%= @team.starting_jungle %>
+</p>
+
+<p>
+  <strong>Startingmid:</strong>
+  <%= @team.starting_mid %>
+</p>
+
+<p>
+  <strong>Starting_ad_carry:</strong>
+  <%= @team.starting_ad_carry %>
+</p>
+
+<p>
+  <strong>Startingsupport:</strong>
+  <%= @team.starting_support %>
+</p>
+
+<p>
+  <strong>League:</strong>
+  <%= @team.league_id %>
+</p>
+
+<p>
+  <strong>Locked:</strong>
+  <%= @team.locked %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

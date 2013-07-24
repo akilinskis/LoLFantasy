@@ -1,0 +1,57 @@
+<%= form_for(@league) do |f| %>
+  <% if @league.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@league.errors.count, "error") %> prohibited this league from being saved:</h2>
+
+      <ul>
+      <% @league.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :private %><br>
+    <%= f.check_box :private %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :commissioner_id %><br>
+    <%= f.number_field :commissioner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :killPoints %><br>
+    <%= f.number_field :killPoints %>
+  </div>
+  <div class="field">
+    <%= f.label :deathPoints %><br>
+    <%= f.number_field :deathPoints %>
+  </div>
+  <div class="field">
+    <%= f.label :assistPoints %><br>
+    <%= f.number_field :assistPoints %>
+  </div>
+  <div class="field">
+    <%= f.label :minionKills %><br>
+    <%= f.number_field :minionKills %>
+  </div>
+  <div class="field">
+    <%= f.label :gameLength %><br>
+    <%= f.number_field :gameLength %>
+  </div>
+  <div class="field">
+    <%= f.label :maxTeams %><br>
+    <%= f.number_field :maxTeams %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

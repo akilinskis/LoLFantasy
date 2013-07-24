@@ -1,12 +1,41 @@
 LoLFantasy::Application.routes.draw do
+  resources :player_scores
+
+  resources :team_scores
+
+  resources :games
+
+  resources :pro_teams
+
+  resources :players
+
+  resources :waiver_claims
+
+  resources :free_agents
+
+  resources :matches
+
+  resources :teams
+
+  resources :leagues
+
+  resources :users
+
+  resources :globals
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'globals#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get 'login' => 'sessions#new'
+  post 'sessions' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+  get 'register' => 'users#new'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

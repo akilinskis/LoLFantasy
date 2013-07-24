@@ -1,0 +1,2 @@
+module WaiverClaimsHelper
+end

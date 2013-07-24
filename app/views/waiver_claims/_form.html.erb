@@ -1,0 +1,25 @@
+<%= form_for(@waiver_claim) do |f| %>
+  <% if @waiver_claim.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@waiver_claim.errors.count, "error") %> prohibited this waiver_claim from being saved:</h2>
+
+      <ul>
+      <% @waiver_claim.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_id %><br>
+    <%= f.number_field :player_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team_id %><br>
+    <%= f.number_field :team_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

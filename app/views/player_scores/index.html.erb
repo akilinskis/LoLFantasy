@@ -1,0 +1,37 @@
+<h1>Listing player_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team Score id</th>
+      <th>Player</th>
+      <th>Kills</th>
+      <th>Deaths</th>
+      <th>Assists</th>
+      <th>Minions</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @player_scores.each do |player_score| %>
+      <tr>
+        <td><%= link_to player_score.team_score_id, player_score.team_score %></td>
+        <td><%= link_to player_score.player.name, player_score.player %></td>
+        <td><%= player_score.kills %></td>
+        <td><%= player_score.deaths %></td>
+        <td><%= player_score.assists %></td>
+        <td><%= player_score.minions %></td>
+        <td><%= link_to 'Show', player_score %></td>
+        <td><%= link_to 'Edit', edit_player_score_path(player_score) %></td>
+        <td><%= link_to 'Destroy', player_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player score', new_player_score_path %>

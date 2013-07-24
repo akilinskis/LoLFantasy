@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pro_team_id: 1
+  game_id: 1
+  playerScoreTop: 1
+  playerScoreJungle: 1
+  playerScoreMid: 1
+  playerScoreADCarry: 1
+  playerScoreSupport: 1
+
+two:
+  pro_team_id: 1
+  game_id: 1
+  playerScoreTop: 1
+  playerScoreJungle: 1
+  playerScoreMid: 1
+  playerScoreADCarry: 1
+  playerScoreSupport: 1

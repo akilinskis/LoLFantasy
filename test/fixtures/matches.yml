@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  league_id: 1
+  week: 1
+  season: 1
+  split: 1
+  team1_id: 1
+  team2_id: 1
+  team1Score: 1
+  team2Score: 1
+  winner_id: 1
+
+two:
+  league_id: 1
+  week: 1
+  season: 1
+  split: 1
+  team1_id: 1
+  team2_id: 1
+  team1Score: 1
+  team2Score: 1
+  winner_id: 1

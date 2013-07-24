@@ -1,0 +1,37 @@
+<h1>Listing games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Season</th>
+      <th>Split</th>
+      <th>Week</th>
+      <th>Duration</th>
+      <th>Team 1</th>
+      <th>Team 2</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.season %></td>
+        <td><%= game.split %></td>
+        <td><%= game.week %></td>
+        <td><%= game.duration %></td>
+        <td><%= link_to game.team_score1.pro_team.name, game.team_score1 %></td>
+        <td><%= link_to game.team_score2.pro_team.name, game.team_score2 %></td>
+        <td><%= link_to 'Show', game %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path %>

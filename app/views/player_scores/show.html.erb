@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @player_score.game_id %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @player_score.player_id %>
+</p>
+
+<p>
+  <strong>Kills:</strong>
+  <%= @player_score.kills %>
+</p>
+
+<p>
+  <strong>Deaths:</strong>
+  <%= @player_score.deaths %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @player_score.assists %>
+</p>
+
+<p>
+  <strong>Minions:</strong>
+  <%= @player_score.minions %>
+</p>
+
+<%= link_to 'Edit', edit_player_score_path(@player_score) %> |
+<%= link_to 'Back', player_scores_path %>

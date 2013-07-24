@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>League:</strong>
+  <%= @free_agent.league.name %>
+</p>
+
+<table>
+  <strong>Players:</strong>
+  <% @free_agent.players.each do |player| %>
+  <tr>
+    <td><%= link_to "#{player.pro_team.handle} #{player.name}", player %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Edit', edit_free_agent_path(@free_agent) %> |
+<%= link_to 'Back', free_agents_path %>

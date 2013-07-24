@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pro team:</strong>
+  <%= @team_score.pro_team_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @team_score.game_id %>
+</p>
+
+<p>
+  <strong>Playerscoretop:</strong>
+  <%= @team_score.playerScoreTop %>
+</p>
+
+<p>
+  <strong>Playerscorejungle:</strong>
+  <%= @team_score.playerScoreJungle %>
+</p>
+
+<p>
+  <strong>Playerscoremid:</strong>
+  <%= @team_score.playerScoreMid %>
+</p>
+
+<p>
+  <strong>Playerscoreadcarry:</strong>
+  <%= @team_score.playerScoreADCarry %>
+</p>
+
+<p>
+  <strong>Playerscoresupport:</strong>
+  <%= @team_score.playerScoreSupport %>
+</p>
+
+<%= link_to 'Edit', edit_team_score_path(@team_score) %> |
+<%= link_to 'Back', team_scores_path %>

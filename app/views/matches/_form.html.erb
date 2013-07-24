@@ -1,0 +1,53 @@
+<%= form_for(@match) do |f| %>
+  <% if @match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% @match.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :league_id %><br>
+    <%= f.number_field :league_id %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.number_field :week %>
+  </div>
+  <div class="field">
+    <%= f.label :season %><br>
+    <%= f.number_field :season %>
+  </div>
+  <div class="field">
+    <%= f.label :split %><br>
+    <%= f.number_field :split %>
+  </div>
+  <div class="field">
+    <%= f.label :team1_id %><br>
+    <%= f.number_field :team1_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team2_id %><br>
+    <%= f.number_field :team2_id %>
+  </div>
+  <div class="field">
+    <%= f.label :team1Score %><br>
+    <%= f.number_field :team1Score %>
+  </div>
+  <div class="field">
+    <%= f.label :team2Score %><br>
+    <%= f.number_field :team2Score %>
+  </div>
+  <div class="field">
+    <%= f.label :winner_id %><br>
+    <%= f.number_field :winner_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

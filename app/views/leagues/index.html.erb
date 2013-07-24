@@ -1,0 +1,49 @@
+<h1>Listing leagues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Private</th>
+      <th>Password</th>
+      <th>Commissioner</th>
+      <th>League Type</th>
+      <th>Kill Points</th>
+      <th>Death Points</th>
+      <th>Assist Points</th>
+      <th>Minion Kills Carry</th>
+      <th>Minion Kills Support</th>
+      <th>Game Normal</th>
+      <th>Max Teams</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leagues.each do |league| %>
+      <tr>
+        <td><%= league.name %></td>
+        <td><%= league.private %></td>
+        <td><%= league.password %></td>
+        <td><%= link_to league.commissioner.name, league.commissioner %></td>
+        <td><%= league.league_type %></td>
+        <td><%= league.kill_points %></td>
+        <td><%= league.death_points %></td>
+        <td><%= league.assist_points %></td>
+        <td><%= league.minion_kills_carry %></td>
+        <td><%= league.minion_kills_support %></td>
+        <td><%= league.game_normal %></td>
+        <td><%= league.max_teams %></td>
+        <td><%= link_to 'Show', league %></td>
+        <td><%= link_to 'Edit', edit_league_path(league) %></td>
+        <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New League', new_league_path %>

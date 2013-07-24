@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @waiver_claim.player_id %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @waiver_claim.team_id %>
+</p>
+
+<%= link_to 'Edit', edit_waiver_claim_path(@waiver_claim) %> |
+<%= link_to 'Back', waiver_claims_path %>

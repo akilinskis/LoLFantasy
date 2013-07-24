@@ -1,0 +1,31 @@
+<h1>Listing pro_teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Handle</th>
+      <th>Image url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pro_teams.each do |pro_team| %>
+      <tr>
+        <td><%= pro_team.name %></td>
+        <td><%= pro_team.handle %></td>
+        <td><%= pro_team.image_url %></td>
+        <td><%= link_to 'Show', pro_team %></td>
+        <td><%= link_to 'Edit', edit_pro_team_path(pro_team) %></td>
+        <td><%= link_to 'Destroy', pro_team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pro team', new_pro_team_path %>
