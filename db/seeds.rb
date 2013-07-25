@@ -45,6 +45,12 @@ sneaky = Player.create(name: 'Sneaky', position: 'ad carry', pro_team: cloud9, a
 lemonNation = Player.create(name: 'LemonNation', position: 'support', pro_team: cloud9, active: true)
 tabzz = Player.create(name: 'Tabzz', position: 'ad carry', pro_team: lemondogs, active: true)
 darker = Player.create(name: 'Darker', position: 'support', pro_team: gambit, active: true)
+crumbzz = Player.create(name: 'Crumbzz', position: 'jungle', pro_team: dignitas, active: true)
+cop = Player.create(name: 'Cop', position: 'ad carry', pro_team: curse, active: true)
+patoy = Player.create(name: 'Patoy', position: 'support', pro_team: dignitas, active: true)
+araneae = Player.create(name: 'Araneae', position: 'jungle', pro_team: alternate, active: true)
+yellowpete = Player.create(name: 'yellowpete', position: 'ad carry', pro_team: eg, active: true)
+edWard = Player.create(name: 'EDward', position: 'support', pro_team: curse, active: true)
 
 Game.delete_all
 c9tsmw6 = Game.create(week: 6, split: 2, season: 3, duration: 25)
@@ -68,13 +74,15 @@ PlayerScore.create(team_score: tsmScorew6c9, player: xpecial, kills: 1, deaths: 
 User.delete_all
 user1 = User.create(name: 'Andy', password: 'password', email: 'andyk@slalom.com', admin: true)
 user2 = User.create(name: 'Steve', password: 'password', email: 'steve@example.com', admin: false)
+user3 = User.create(name: 'Rob', password: 'password', email: 'rob@example.com', admin: false)
 
 League.delete_all
 league = League.create(name: 'League 1', private: false, commissioner: user1, league_type: 'draft', kill_points: 3, death_points: -2, assist_points: 2, minion_kills_carry: 50, minion_kills_support: 30, game_normal: 20, max_teams: 10)
 
 Team.delete_all
-team1 = Team.create(name: 'Team 1', handle: 'ANDY', owner: user1, league: league, starting_top: sychoSid, starting_jungle: saintvicious, starting_mid: xPeke, starting_ad_carry: candyPanda, starting_support: lemonNation, locked: false)
-team2 = Team.create(name: 'Team 2', handle: 'STVE', owner: user2, league: league, starting_top: dyrus, starting_jungle: meteos, starting_mid: reginaid, starting_ad_carry: sneaky, starting_support: xpecial, locked: false)
+team1 = Team.create(name: 'Poro', handle: 'ANDY', owner: user1, league: league, starting_top: sychoSid, starting_jungle: saintvicious, starting_mid: xPeke, starting_ad_carry: candyPanda, starting_support: lemonNation, locked: false)
+team2 = Team.create(name: 'Randy Newman', handle: 'STVE', owner: user2, league: league, starting_top: dyrus, starting_jungle: araneae, starting_mid: hai, starting_ad_carry: yellowpete, starting_support: edWard, locked: false)
+team3 = Team.create(name: 'America', handle: 'ROB', owner: user3, league: league, starting_top: balis, starting_jungle: crumbzz, starting_mid: reginaid, starting_ad_carry: cop, starting_support: patoy, locked: false)
 
 Match.delete_all
 match1 = Match.create(league: league, season: 3, split: 2, week: 6)
