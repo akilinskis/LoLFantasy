@@ -5,6 +5,8 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'heroku'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -37,8 +39,8 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# Use thin as the app server
+gem 'thin', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
