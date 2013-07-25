@@ -11,10 +11,13 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore db migrations, just push the newest schema
+/db/migrate
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
 
 # Ignore IntelliJ-specific files
-.idea
+/.idea
 *.iml
