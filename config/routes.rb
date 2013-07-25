@@ -37,6 +37,8 @@ LoLFantasy::Application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'register' => 'users#new'
 
+  get 'my_leagues' => 'users#leagues'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

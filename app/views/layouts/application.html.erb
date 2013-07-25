@@ -12,7 +12,7 @@
     <li><%= link_to 'Home', root_path %></li>
     <li><%= link_to 'Leagues', leagues_path %></li>
     <% if logged_in? %>
-        <li><%= link_to 'My Leagues', current_user %></li>
+        <li><%= link_to 'My Leagues', my_leagues_path %></li>
     <% end %>
 </ul>
 
