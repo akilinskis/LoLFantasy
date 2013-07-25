@@ -54,7 +54,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: LoLFantasy_production
-  pool: 5
-  username: postgres
-  password:
+  database: d4gfovam6a7mlv
+  port: 5432
+  host: ec2-54-227-238-34.compute-1.amazonaws.com
+  username: rbesfnhsgxreen
+  password: U6C70DqDxExJiW_AyS3VfW9bdc
