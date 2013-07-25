@@ -6,7 +6,6 @@ class GlobalsController < ApplicationController
   def index
     @globals = Global.all
     @global = Global.first
-
   end
 
   # GET /globals/1
