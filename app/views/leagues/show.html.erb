@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+    <strong>Name:</strong>
+    <%= @league.name %>
+</p>
+
+<p>
   <strong>Private:</strong>
   <%= @league.private %>
 </p>
@@ -12,42 +17,47 @@
 
 <p>
   <strong>Commissioner:</strong>
-  <%= @league.commissioner_id %>
+  <%= link_to @league.commissioner.name, @league.commissioner %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @league.type %>
+  <strong>League Type:</strong>
+  <%= @league.league_type %>
 </p>
 
 <p>
-  <strong>Killpoints:</strong>
-  <%= @league.killPoints %>
+  <strong>Kill Points:</strong>
+  <%= @league.kill_points %>
 </p>
 
 <p>
-  <strong>Deathpoints:</strong>
-  <%= @league.deathPoints %>
+  <strong>Death Points:</strong>
+  <%= @league.death_points %>
 </p>
 
 <p>
-  <strong>Assistpoints:</strong>
-  <%= @league.assistPoints %>
+  <strong>Assist Points:</strong>
+  <%= @league.assist_points %>
 </p>
 
 <p>
-  <strong>Minionkills:</strong>
-  <%= @league.minionKills %>
+  <strong>Minion Kills Carry:</strong>
+  <%= @league.minion_kills_carry %>
 </p>
 
 <p>
-  <strong>Gamelength:</strong>
-  <%= @league.gameLength %>
+    <strong>Minion Kills Support:</strong>
+    <%= @league.minion_kills_support %>
 </p>
 
 <p>
-  <strong>Maxteams:</strong>
-  <%= @league.maxTeams %>
+  <strong>Game Normal:</strong>
+  <%= @league.game_normal %>
+</p>
+
+<p>
+  <strong>Max Teams:</strong>
+  <%= @league.max_teams %>
 </p>
 
 <%= link_to 'Edit', edit_league_path(@league) %> |
