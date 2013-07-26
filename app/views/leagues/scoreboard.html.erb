@@ -1,0 +1,46 @@
+<h1>Scoreboard</h1>
+
+<ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'League Home', @league %></li>
+    <li><%= link_to 'Standings', standings_path %></li>
+    <li><%= link_to 'Scoreboard', scoreboard_path %></li>
+    <li><%= link_to 'Free Agents', free_agent_path %></li>
+    <% if logged_in? %>
+        <li><%= link_to 'My Team', @league %></li>
+    <% end %>
+</ul>
+
+<table>
+    <thead>
+    <tr>
+        <th>League</th>
+        <th>Season</th>
+        <th>Split</th>
+        <th>Week</th>
+        <th>Team1 Score</th>
+        <th>Team2 Score</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Winner</th>
+        <th>Loser</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @matches.each do |match| %>
+        <tr>
+            <td><%= match.league_id %></td>
+            <td><%= match.season %></td>
+            <td><%= match.split %></td>
+            <td><%= match.week %></td>
+            <td><%= match.team1_score %></td>
+            <td><%= match.team2_score %></td>
+            <td><%= match.team1.name %></td>
+            <td><%= match.team2.name %></td>
+            <td><%= match.winner.name %></td>
+            <td><%= match.loser.name %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

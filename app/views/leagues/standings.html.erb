@@ -1,0 +1,12 @@
+<h1>Standings</h1>
+
+<ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'League Home', @league %></li>
+    <li><%= link_to 'Standings', standings_path %></li>
+    <li><%= link_to 'Scoreboard', scoreboard_path %></li>
+    <li><%= link_to 'Free Agents', free_agent_path %></li>
+    <% if logged_in? %>
+        <li><%= link_to 'My Team', @league %></li>
+    <% end %>
+</ul>

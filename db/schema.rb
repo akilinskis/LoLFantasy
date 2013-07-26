@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130724150253) do
+ActiveRecord::Schema.define(version: 20130726153054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,11 +66,20 @@ ActiveRecord::Schema.define(version: 20130724150253) do
     t.integer  "week"
     t.integer  "season"
     t.integer  "split"
-    t.integer  "team1_score"
-    t.integer  "team2_score"
+    t.float    "team1_score"
+    t.float    "team2_score"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "team1_id"
+    t.integer  "team2_id"
+    t.integer  "winner_id"
+    t.integer  "loser_id"
   end
+
+  add_index "matches", ["loser_id"], name: "index_matches_on_loser_id", using: :btree
+  add_index "matches", ["team1_id"], name: "index_matches_on_team1_id", using: :btree
+  add_index "matches", ["team2_id"], name: "index_matches_on_team2_id", using: :btree
+  add_index "matches", ["winner_id"], name: "index_matches_on_winner_id", using: :btree
 
   create_table "player_scores", force: true do |t|
     t.integer  "team_score_id"

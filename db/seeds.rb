@@ -85,7 +85,7 @@ team2 = Team.create(name: 'Randy Newman', handle: 'STVE', owner: user2, league: 
 team3 = Team.create(name: 'America', handle: 'ROB', owner: user3, league: league, starting_top: balis, starting_jungle: crumbzz, starting_mid: reginaid, starting_ad_carry: cop, starting_support: patoy, locked: false)
 
 Match.delete_all
-match1 = Match.create(league: league, season: 3, split: 2, week: 6)
+match1 = Match.create(league: league, season: 3, split: 2, week: 7, team1_score: 100, team2_score: 90, team1: team1, team2: team2, winner: team1, loser: team2)
 
 FreeAgent.delete_all
 freeAgentList = FreeAgent.create(league: league, players: [tabzz, darker])

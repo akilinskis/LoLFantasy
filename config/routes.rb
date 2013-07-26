@@ -39,6 +39,9 @@ LoLFantasy::Application.routes.draw do
 
   get 'my_leagues' => 'users#leagues'
 
+  get 'leagues/:id/scoreboard' => 'leagues#scoreboard', as: :scoreboard
+  get 'leagues/:id/standings' => 'leagues#standings', as: :standings
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

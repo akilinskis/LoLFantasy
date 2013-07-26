@@ -61,6 +61,18 @@ class LeaguesController < ApplicationController
     end
   end
 
+  # GET /leagues/1/scoreboard
+  def scoreboard
+    @league = League.find(params[:id])
+    @matches = Match.where('league_id = ? AND week = ?', params[:id], Global.first.current_week)
+  end
+
+  # GET /leagues/1/standings
+  def standings
+    @league = League.find(params[:id])
+    @matches = Match.where('league_id = ?', params[:id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_league
